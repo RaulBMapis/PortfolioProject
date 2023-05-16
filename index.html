@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo2.jpg" class="logo" alt="logo">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Full-Stack Developer</p>
+            <h1>Hi, I'm <span>Raul Barber</span><br> blah blah texto</h1>
+        </div>
+    </div>
+
+</div>
+<!-- ------------About-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+
+                <img src=""  alt="Abouts"> 
+            
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur 
+                     adipisicing elit. Cumque accusamus nesciunt
+                     doloremque error harum facere delectus 
+                     fugit tenetur. Laboriosam totam porro aut, 
+                     ab optio tempore ullam error eaque vero nostrum.
+                    </p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onClick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onClick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onClick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Skill1</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Skill2</span><br>Web app Development</li>
+                            <li><span>skill3</span><br>Designing Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>x2</span><br>Designing Web/App Interfaces</li>
+                            <li><span>x3</span><br>Web app Development</li>
+                            <li><span>x4</span><br>Designing Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>x7</span><br>Designing Web/App Interfaces</li>
+                            <li><span>x6</span><br>Web app Development</li>
+                            <li><span>x5</span><br>Designing Web/App Interfaces</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------projects------- -->
+
+<div id="projects">
+    <div class="container">
+        <h2 class="sub-title">My projects</h2>
+        <div class="projects-list">
+
+            <div>
+                <h3>project 1</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo autem quisquam id aliquid. Iure repellat enim, ducimus magnam temporibus reiciendis reprehenderit error laborum adipisci, amet impedit eaque suscipit deserunt vitae!</p>
+            </div>
+            <div>
+                <h3>project 2</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo autem quisquam id aliquid. Iure repellat enim, ducimus magnam temporibus reiciendis reprehenderit error laborum adipisci, amet impedit eaque suscipit deserunt vitae!</p>
+            </div>
+            <div>
+                <h3>project 3</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo autem quisquam id aliquid. Iure repellat enim, ducimus magnam temporibus reiciendis reprehenderit error laborum adipisci, amet impedit eaque suscipit deserunt vitae!</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const tablinks = document.querySelectorAll(".tab-links");
+    const tabcontents = document.querySelectorAll(".tab-contents");
+
+    function opentab(tabname) {
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        for (let i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+
+        document.getElementById(tabname).classList.add("active-tab");
+
+        const selectedTab = document.querySelector(`[onClick="opentab('${tabname}')"]`);
+        selectedTab.classList.add("active-link");
+    }
+</script>
+
+
+</body>
+</html>
