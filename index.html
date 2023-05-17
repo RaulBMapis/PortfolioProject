@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo2.jpg" class="logo" alt="logo">
+            <img src="" class="logo" alt="logo">
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Skills</a></li>
@@ -19,7 +20,7 @@
             </ul>
         </nav>
         <div class="header-text">
-            <p>Full-Stack Developer</p>
+            <p>texto -> web developer por ejemplo</p>
             <h1>Hi, I'm <span>Raul Barber</span><br> blah blah texto</h1>
         </div>
     </div>
@@ -36,11 +37,8 @@
             </div>
             <div class="about-col-2">
                 <h2 class="sub-title">About Me</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur 
-                     adipisicing elit. Cumque accusamus nesciunt
-                     doloremque error harum facere delectus 
-                     fugit tenetur. Laboriosam totam porro aut, 
-                     ab optio tempore ullam error eaque vero nostrum.
+                    <p>
+                    Descripcion
                     </p>
 
 
@@ -51,23 +49,23 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Skill1</span><br>Designing Web/App Interfaces</li>
-                            <li><span>Skill2</span><br>Web app Development</li>
-                            <li><span>skill3</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Skill1</span><br>inserte texto</li>
+                            <li><span>Skill2</span><br>inserte texto</li>
+                            <li><span>skill3</span><br>inserte texto</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>x2</span><br>Designing Web/App Interfaces</li>
-                            <li><span>x3</span><br>Web app Development</li>
-                            <li><span>x4</span><br>Designing Web/App Interfaces</li>
+                            <li><span>x2</span><br>inserte texto</li>
+                            <li><span>x3</span><br>inserte texto</li>
+                            <li><span>x4</span><br>inserte texto</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>x7</span><br>Designing Web/App Interfaces</li>
-                            <li><span>x6</span><br>Web app Development</li>
-                            <li><span>x5</span><br>Designing Web/App Interfaces</li>
+                            <li><span>x7</span><br>inserte texto</li>
+                            <li><span>x6</span><br>inserte texto</li>
+                            <li><span>x5</span><br>inserte texto</li>
                         </ul>
                     </div>
             </div>
@@ -84,15 +82,16 @@
 
             <div>
                 <h3>project 1</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo autem quisquam id aliquid. Iure repellat enim, ducimus magnam temporibus reiciendis reprehenderit error laborum adipisci, amet impedit eaque suscipit deserunt vitae!</p>
+                <p>texto
+                </p>
             </div>
             <div>
-                <h3>project 2</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo autem quisquam id aliquid. Iure repellat enim, ducimus magnam temporibus reiciendis reprehenderit error laborum adipisci, amet impedit eaque suscipit deserunt vitae!</p>
+                <h3>project</h3>
+                <p>texto</p>
             </div>
             <div>
                 <h3>project 3</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo autem quisquam id aliquid. Iure repellat enim, ducimus magnam temporibus reiciendis reprehenderit error laborum adipisci, amet impedit eaque suscipit deserunt vitae!</p>
+                <p>texto</p>
             </div>
 
         </div>
@@ -115,9 +114,13 @@
 
         const selectedTab = document.querySelector(`[onClick="opentab('${tabname}')"]`);
         selectedTab.classList.add("active-link");
+        for (let i = 0; i < tablinks.length; i++) {
+            if (tablinks[i] !== selectedTab) {
+                tablinks[i].classList.remove("active-link");
+            }
+        }
     }
 </script>
-
 
 </body>
 </html>
