@@ -5,14 +5,17 @@
     box-sizing: border-box;
 }
 body {
-    background: #0a192f;
-    color: #fff;
-
+    /* background-image: url(../images/background.png);
+    background-size:cover;
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-color: #ababab;
 }
 #header{
     width: 100%;
     height: 100vh;
-    /* background-image: url(images/Backg.jpg); */
+    /* background-image:; */
     background-size: cover;
     background-position: center;
 }
